@@ -1,0 +1,394 @@
+
+<!-- 
+	
+			<etiqueta> </etiqueta> 	                        //como funcan los objetos en html
+            <br>					                        //espacio de linea / separador de lineas 
+            <head>                                          //para poner lo oculto a la pagina  
+            <body>                                          //para poner lo que se muestra en la pagina 
+            <h1> </h1> ... <h6>                             //textos de distintos tamaños en html 
+
+			ICONO DEL TAB DE LA PAGINA (DEBE ESTAR EN FORMATO .ICO)
+
+			<link rel="icon" href="perrogay.ico">
+
+          	el h1 1 sola vez en la pagina, 
+			los demas adecuados al contexto 
+
+          	<div> divisor 
+			<a> redirigir
+			<a href=""></a>  2 tipo de referencias: locales y externas; con y sín https: protocolo de transferencia de hipertexto, protocolo para rescatar desde el internet 
+
+			ej <a href="https://facebook.com"> Click aqui para ir a facebook </a>
+
+			<a href="#codigo">Bajar</a> <br><br>  ESTA ES UNA REFERENCIA A ALGUN ELEMENTO CON LA ETIQUETA " ID="codigo" " NOS PERMITE BAJAR EN LA PAG 
+			HASTA ELLA
+
+			al igual que en linux se puede usar el identificador (ignorar comillas) ".." para referirnos a la carpeta ANTERIOR
+
+			ej local: 
+
+			EXPLICACION SAMPLE DE HTML: 
+
+			<meta charset='utf-8'>
+
+			In HTML, the <meta> tag is used to provide metadata about the HTML document. 
+			The specific line you shared is using the charset attribute within the <meta> tag.
+			The charset attribute defines the character encoding for the HTML document. 
+			Character encoding determines how the characters within the document are represented and understood by the browser or other user agents. 
+			In this case, the character encoding specified is utf-8.
+			UTF-8 (Unicode Transformation Format - 8-bit) is a character encoding standard that supports a wide range of characters from various languages 
+			and symbols. It's widely used and recommended for web pages because of its ability to handle multilingual content effectively.
+			Including this line of code at the beginning of an HTML document ensures that the document's content will be 
+			displayed and interpreted correctly by browsers and other software, regardless of the language and characters used in the content. 
+			It helps prevent issues with special characters, non-English text, and other language-related problems on web pages.
+
+			<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+
+			compatibilidad con internet explorer edge (??? qujien xuxa quiere eso)
+
+			<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+			vuelve la pagina responsiva metiendo en el tag de html <meta> la metadata del atributo de name "viewport" 
+
+			--This link tag is used to link an external CSS (Cascading Style Sheets) file to an HTML document. 
+			CSS is a styling language used to control the presentation and layout of web pages.
+			Let's break it down:
+			<link>: This is an HTML link tag used to establish a link between the HTML document and external resources like CSS files.	
+					
+			rel='stylesheet': This attribute specifies the relationship between the linked resource and the current document. 
+			In this case, it indicates that the linked resource is a stylesheet used for styling.
+
+			type='text/css': This attribute defines the MIME type of the linked resource. 
+			It tells the browser that the linked file is a CSS file, which is important for proper interpretation.
+
+			media='screen': This attribute specifies the media type for which the CSS rules should be applied. 
+			In this case, screen indicates that the CSS rules are intended for screen display (e.g., computer screens, tablets, smartphones) 
+			as opposed to other media types like print.
+
+			href='main.css': This attribute specifies the URL of the external CSS file to be linked. 
+			In this example, the CSS file is named "main.css," and it should be located in the same directory as the HTML file.
+
+			By using this link tag, the HTML document references the "main.css" file and applies its styles to the 
+			content of the HTML document. This separation of style (CSS) from content (HTML) is a fundamental principle of web development 
+			and allows for easier maintenance, organization, and consistency across multiple pages of a website.--
+
+			
+			"<script src='main.js'></script>":
+
+			<script>: This is an HTML script tag used to define client-side JavaScript code or to link an external JavaScript file to the HTML document.
+			src='main.js': This attribute specifies the URL of the external JavaScript file to be included. In this example, 
+			the JavaScript file is named "main.js," and it should be located in the same directory as the HTML file.
+
+
+
+			------------------------------------------------------------------------------------------------------------------------
+
+			MAS COSAS APARTE _________________
+
+
+			LISTAS:
+
+
+			<ul> </ul>                                      //Unordered List - Lista de cosas DESORDENADA (COMO SEÑALAR PUNTOS EN UN WORD)
+
+				<li> Huevos </li>                                  //elementos de la lista (PUNTOS)
+				<li> Pan </li>
+				<li>  </li>
+				<li> Huevos </li>
+
+			<ol> </ol> 										//ORDERED LIST - Lista de cosas ORDENADA (NUMERADA)
+
+			------------------------------------------------------------------------------------------------------------------------
+
+			IMAGENES 
+
+			<img src="welderbeast.jpg" *propiedades aqui(width, height)*  >  //NO ES RECOMENDADO MODIFICAR LAS IMAGENES AQUI EN HTML SINO EN EL CSS
+
+			VIDEO
+
+			<video src="aaagria.mp4" autoplay controls loop="true" ></video>
+
+			EMBEDDEAR ELEMENTOS DE OTRAS PAGINAS: VIDEOS MAPAS FEEDS 
+
+			<iframe> </iframe>
+
+			<iframe src="https://www.youtube.com/embed/fepnDWhyrY8" frameborder="1" allowfullscreen></iframe>
+
+
+			AUDIO
+
+			<audio src="aaagria.mp4" autoplay controls loop="true" ></audio>
+
+			FORMS - Metodo para obtener input del usuario ----------------------------------------------------------------
+
+
+			<form action="">
+
+				<input type="text" name="inputUsuario" required>      //name es el nombre de la variable, required es un atributo que no es
+				<br>												    recomendado ya que las validaciones deberian ser del lado del backend para
+																		asegurar seguridad
+
+				<input type="button" value="Boton enviar"> <br>
+
+				<input type="submit"> <br>
+				
+				<input type="email" name="inputUsuario" required> <br>
+				<input type="number" name="inputUsuario"> <br>
+				<input type="password" name="inputUsuario"> <br>
+
+
+
+			</form>
+
+
+			The <form> element in HTML is used to create a container for various form controls like input fields, 
+			checkboxes, radio buttons, buttons, and more. It provides a way to collect and submit user input. 
+			Here's a list of some common attributes and elements that can be used within a <form> element:
+
+			Attributes for the <form> element:
+				action: Specifies the URL where the form data should be sent when the form is submitted.
+				method: Defines the HTTP method to be used when sending form data. Common values are "GET" and "POST".
+				enctype: Specifies how the form data should be encoded before being sent to the server. 
+				         Common values include "application/x-www-form-urlencoded" and "multipart/form-data".
+
+				target: Determines where the response from the server should be displayed. 
+						Common values include "_self" (default), "_blank", "_parent", and "_top".
+
+				autocomplete: Specifies whether browser autocomplete features should be enabled for form inputs. Common values are "on" and "off".
+
+			Common elements and controls within a <form>:
+				<input>: A versatile element for various types of user input, such as text, password, email, radio buttons, checkboxes, etc.
+				<textarea>: A multi-line text input field for longer text entries.
+				<select>: Creates a dropdown menu for selecting one option from a list of options.
+				<button>: Creates a button that can be used to trigger form submission or perform other actions.
+				<label>: Associates a label with an input element, providing better user experience and accessibility.
+				<fieldset>: Groups related form elements together and can be used to apply styles or structure the form.
+				<legend>: Provides a title or description for a <fieldset> element.
+				<optgroup>: Groups related options within a <select> element.
+				<option>: Defines an option within a <select> or <optgroup> element.
+				<input type="submit"> and <input type="reset">: Specialized buttons for submitting and resetting forms.
+				<input type="file">: Allows users to select and upload files.
+				<input type="hidden">: A hidden field used to store data that's not visible to users.
+
+
+
+
+				METADATOS:
+
+			<meta charset="utf-8">
+
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+
+			nombre del atributo, hay algunos comunes como categorías, content es el metadato en si
+
+			<meta name="description" content="Esta es una compañia dedicada a ...."
+
+			<meta name="keywords" content="palabras clave de la pagina separadas por comas">
+
+			<meta name="robots" content="noindex" desindexa la pagina, provocando que no se muestre en motores de busqueda, para paginas ocultas
+
+
+					SEmantica
+
+			Nav: el nav es el apartado donde va toda las cosas asociadas a la navegacion entre las "ventanas" de una pagina web debe ir igual en todas
+			las ventanas
+
+			Head
+			Body
+			Footer
+
+
+			<table>
+				<tr>            --define las filas
+					<td> </td>  --Elemento dentro de la fila
+				</tr>
+			</table>
+
+
+
+          	-->
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Titulo de pestania web</title>
+		<link rel="icon" href="perro.ico">
+	</head>
+
+	<body>
+
+
+		<header>
+
+			<nav>
+				<ul>
+					<li> <a href="index.html">Inicio </a> </li>
+					<li> <a href="nosotros.html">Sobre Nosotros </a> </li>
+					<li> <a href="catalogo.html">Catalogo </a> </li>
+				</ul>
+			</nav>
+
+		</header>
+		<h1>
+			Esta Pagina es el Inicio	
+		</h1>
+
+		<h2>
+			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores tempore temporibus numquam voluptatem omnis, quae porro similique
+			 a maiores quaerat eveniet, voluptate repellat accusantium odit! Est illum cupiditate sit consectetur.
+		</h2>
+
+		<a href="#codigo">Bajar</a> <br><br>  
+
+		<h1>Holanda </h1>
+		<h2>Holandax </h2>
+		<h3>Holanda </h3>
+		<h4>Holanda </h4>
+		<h5>Holanda </h5>
+		<h6>Holanda </h6>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+		</p>
+		<b>Negrita</b>
+		<i>Italica</i>
+		<strike>Tachada</strike>
+		<small>Pequeñita</small>
+		<a href="exreferencia.html"> Click aqui para ir a facebook </a> <br>
+		<a href="CarpetaEjemplo/ejemploDentroDeCarpeta.html">Click aqui para ir al archivo en la carpeta </a>
+
+		<p>
+			Hola que tal? si te fijas este texto está en <b>Negrita ekisde</b>. Mientras que éste otro está en <i>Italica muy caida y pulenta.</i>
+			Tambien si quieres puedes <a href="https://www.google.com" target="_BLANK">ir a google </a> para buscar un wen.
+		</p>
+
+		<p>
+			Aca voy a meter una <b>imagen </b>
+		</p>
+		
+
+		<img src="welderbeast.jpg">
+
+		<br>
+
+		<p>
+			Aca voy a meter un <b>video </b>
+		</p>
+		
+		<br>
+
+		<video src="aaagria.mp4" autoplay="true" controls loop="true" alt="En este atributo o tag van los 'tags' de la media para el Search
+		       Engine Optimization " title="Esto se ve cuando pasas el mouse por encima" ></video>
+
+		<br>
+
+		<iframe src="https://www.youtube.com/embed/fepnDWhyrY8" frameborder="1" allowfullscreen></iframe>
+
+		<br>
+
+		<audio src="aaagria.mp4" autoplay="true" controls loop="true" id="codigo" ></audio>
+
+
+		<div>
+
+			<h3>Este es mi div</h3>
+			<p>
+				Hola que tal nena cmo estás?
+			</p>
+		</div>
+
+	
+
+		<article>  
+
+			<section>
+				
+					<form action="">
+
+					<input type="text" name="inputUsuario" required value="yuempi"> 
+					<br>
+
+					<input type="button" value="Boton enviar"> <br>
+
+					<input type="submit"> <br>
+					
+					<input type="email" name="inputUsuario" required> <br>
+					<input type="number" name="inputUsuario"> <br>
+					<input type="password" name="inputUsuario"> <br>
+
+					<br>
+					<br>
+					<textarea name="" id="" cols="30" rows="10" readonly >WEna asd almejas carambolas</textarea>
+
+
+
+				</form>
+
+			</section>
+
+		</article>  
+
+		<aside>
+            <h2>Contenido adicional</h2>
+            <p>
+                hello hello este es un espacio al lado Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quod ducimus cupiditate nisi 
+                qui nam,dignissimos amet vel aliquid vitae laudantium officia quasi dolorum quis accusamus totam distinctio? Sunt, sit? 
+            </p>
+        </aside>
+
+		<table>
+			<tr>
+
+				<td><b>Nombre</b></td>
+				<td><b>Apellido</b></td>
+				<td><b>Canal</b></td>
+
+			</tr>
+		</table>
+
+	</body>
+
+
+	<footer>
+        <h4>Copyright ekisdee</h4>
+        <b>siguenos!</b>
+        <br> <br>
+        <a href="https://instagram.com">Instagram</a>
+        <a href="https://instagram.com">Youtube</a>
+        <a href="https://instagram.com">Facebook</a>
+    </footer>
+
+</html>
